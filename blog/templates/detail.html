@@ -1,0 +1,15 @@
+<h1>LIKELION 12 Blog Project</h1>
+<br/>
+
+<a href ="{% url 'create' %}">
+<div class="plus_btn">글 작성하기</div></a>
+
+<hr/>
+
+{% for blog in blogs %}
+<h2>{{ blog.title }}</h2>
+<p>{{ blog.content }}</p>
+<p>{{ blog.created_at }}</p>
+<hr/>
+{% endfor %}
+
